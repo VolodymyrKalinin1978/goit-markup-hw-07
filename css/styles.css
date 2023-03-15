@@ -122,10 +122,10 @@ img {
 
 @media screen and (min-width: 1200px) {
   .subtitle {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    color: var(--primary-navy-blue);
+    /* font-weight: 500; */
+    /* font-size: 20px; */
+    /* line-height: 1.2; */
+    /* color: var(--primary-navy-blue); */
     margin-bottom: 8px;
   }
 }
@@ -248,10 +248,7 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  /* .header-navig > div {
-  display: flex;
-  align-items: center; */
-
+  
   /* navigation action */
 
   /* Header navig address */
@@ -339,6 +336,9 @@ img {
   /* width: 100%;
   height: 100%;
   max-height: 796px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 80px 35px 40px 40px;
 }
 .mobile-menu-btn {
@@ -400,7 +400,7 @@ img {
 .mobile-wraper {
   display: flex;
   flex-direction: column;
-  margin-top: 284px;
+  /* margin-top: 284px; */
 }
 /* mobole adress */
 
@@ -433,18 +433,20 @@ img {
 /* Mobile social menu */
 .mobile-social {
   display: flex;
-  /* width: 100%; */
+   width: 100%; 
+   max-width: 328px;
+   justify-content: space-between;
   /* height: 100%; */
   flex-wrap: wrap;
   /* flex-shrink:1; */
   /* flex-direction: row; */
 }
-.mobile-social-list:not(:nth-last-child(-n + 2)) {
+/* .mobile-social-list:not(:nth-last-child(-n + 2)) {
   margin-bottom: 40px;
-}
-.mobile-social-list:not(:last-child) {
+} */
+/* .mobile-social-list:not(:last-child) {
   margin-right: 56px;
-}
+} */
 
 .mobile-social-wraper {
   position: relative;
@@ -521,6 +523,10 @@ img {
     flex-wrap: wrap;
     flex-direction: row;
     gap: 0;
+
+   max-width: 552px;
+   margin: 0 auto;
+    
   }
 }
 
@@ -530,6 +536,9 @@ img {
     flex-wrap: nowrap;
     /* gap: 120px; */
     flex-direction: row;
+    max-width: none;
+    /* margin: 0 auto; */
+    
   }
 }
 
@@ -744,7 +753,7 @@ img {
   fill: var(--white);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-main-bgc {
     padding: 96px 0;
   }
@@ -754,6 +763,11 @@ img {
   .footer-wraper-inner-title {
     text-align: center;
   }
+  /* .footer-wraper {
+    max-width: 552px;
+      margin: 0 auto;
+  } */
+
 }
 
 /* Main page Index.html */
@@ -988,6 +1002,11 @@ img {
   flex-wrap: wrap;
   margin-bottom: calc(-1 * 72px);
 }
+@media screen and (min-width: 768px) {
+  .section-team-list {
+    margin-right: calc(-1 * 24px);
+  }
+}
 .section-team-list-card {
   width: 100%;
   max-width: 264px;
@@ -1001,11 +1020,14 @@ img {
   margin-bottom: 0;
 } */
 @media screen and (min-width: 768px) {
-  .section-team-list {
+  /* .section-team-list {
     margin-right: calc(-1 * 24px);
-  }
-  .section-team-list-card {
-    margin-right: 24px;
+  } */
+  .section-team-list-card:not(:nth-child(2n)) {
+
+    /* flex-basis: calc(100% / 2 - 24px);
+    margin-right: 24px; */
+margin-right: 24px;
   }
 }
 
@@ -1082,15 +1104,15 @@ img {
 .customers-list {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
+  justify-content: center; 
   margin-right: calc(-1 * 16px);
   margin-bottom: calc(-1 * 72px);
 }
 
 @media screen and (min-width: 768px) {
   .customers-list {
-    margin-right: calc(-1 * 24px);
-    margin-bottom: calc(-1 * 72px);
+    /* margin-right: calc(-1 * 24px);
+    margin-bottom: calc(-1 * 72px); */
   }
 }
 
@@ -1109,12 +1131,25 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .customers-link {
+  /* .customers-link {
     flex-basis: calc(100% / 3 - 24px);
     margin-right: 24px;
     margin-bottom: 72px;
     height: 88px;
-  }
+  } */
+    .customers-link {
+      display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 168px;
+        /* height: 100%; */
+        max-height: 88px;
+      flex-basis: calc(100% / 3 - 24px);
+      margin-right: 24px;
+      margin-bottom: 72px;
+      
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1129,6 +1164,7 @@ img {
   align-items: center;
   justify-content: center;
   width: 100%;
+  max-width: 168px;
   height: 100%;
   border: 1px solid var(--light-slate);
   border-radius: 4px;
@@ -1283,7 +1319,7 @@ img {
 }
 
 .portfolio-cards-sub-wraper {
-  width: 360px;
+  max-width: 360px;
   height: 120px;
   padding: 32px 16px;
   border: 1px solid var(--secondary-cornflower);
@@ -1347,7 +1383,7 @@ img {
 
 .modal {
   position: relative;
-  width: 100%;
+  width: 95vw;
   /* height: 100%; */
   padding: 72px 24px 24px;
   max-width: 408px;
